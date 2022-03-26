@@ -1,4 +1,4 @@
-public Main012 {
+public class Main012 {
 	public static void main(String... strings) {
 		var day = Day012.MONDAY;
 		switch (day) {

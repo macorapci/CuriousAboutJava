@@ -111,9 +111,9 @@ class Imp003 implements Interface003 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main003.java
 $ java Main003
 Override method
-$ javac Main003.java
 $
 
 ````
@@ -151,10 +151,10 @@ class Tool004 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main004.java
 $ java Main004
 0
 0
+$ javac Main004.java
 $
 
 ````
@@ -184,8 +184,8 @@ class Cat005 {
 <summary>Click For Output!</summary>
 
 ````console
-$ java Main005
 $ javac Main005.java
+$ java Main005
 $
 
 ````
@@ -380,7 +380,7 @@ $
 ## Main011
 
 ````java
-public Main011 {
+public class Main011 {
 	public static void main(String... strings) {
 		var day = Day011.MONDAY;
 		switch (day) {
@@ -408,25 +408,13 @@ enum Day011 {
 
 ````console
 $ javac Main011.java
-Main011.java:1: error: class, interface, or enum expected
-public Main011 {
-       ^
-Main011.java:2: error: class, interface, or enum expected
-	public static void main(String... strings) {
-	              ^
-Main011.java:4: error: class, interface, or enum expected
-		switch (day) {
-		^
-Main011.java:7: error: class, interface, or enum expected
+Main011.java:5: error: an enum switch case label must be the unqualified name of an enumeration constant
+			case Day011.MONDAY:
+			           ^
+Main011.java:7: error: an enum switch case label must be the unqualified name of an enumeration constant
 			case Day011.TUESDAY:
-			^
-Main011.java:9: error: class, interface, or enum expected
-			default:
-			       ^
-Main011.java:11: error: class, interface, or enum expected
-		}	
-		^
-6 errors
+			           ^
+2 errors
 $
 
 ````
@@ -436,7 +424,7 @@ $
 ## Main012
 
 ````java
-public Main012 {
+public class Main012 {
 	public static void main(String... strings) {
 		var day = Day012.MONDAY;
 		switch (day) {
@@ -463,26 +451,11 @@ enum Day012 {
 <summary>Click For Output!</summary>
 
 ````console
+$ java Main012
+1
+2
+3
 $ javac Main012.java
-Main012.java:1: error: class, interface, or enum expected
-public Main012 {
-       ^
-Main012.java:2: error: class, interface, or enum expected
-	public static void main(String... strings) {
-	              ^
-Main012.java:4: error: class, interface, or enum expected
-		switch (day) {
-		^
-Main012.java:7: error: class, interface, or enum expected
-			case TUESDAY:
-			^
-Main012.java:9: error: class, interface, or enum expected
-			default:
-			       ^
-Main012.java:11: error: class, interface, or enum expected
-		}	
-		^
-6 errors
 $
 
 ````
