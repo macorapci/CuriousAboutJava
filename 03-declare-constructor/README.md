@@ -6,7 +6,7 @@ openjdk 11.0.14 2022-01-18
 OpenJDK Runtime Environment (build 11.0.14+9-Ubuntu-0ubuntu2.20.04)
 OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing) 
 ````
-## Main01.java
+## Main01
 
 ````java
 public class Main01 {
@@ -34,13 +34,13 @@ class C01 extends B01 {
 		System.out.print("C-");
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main01.java
+$ javac Main01.java
 Main01.java:22: error: constructor B01 in class B01 cannot be applied to given types;
 	public C01() {
 	             ^
@@ -48,12 +48,13 @@ Main01.java:22: error: constructor B01 in class B01 cannot be applied to given t
   found: no arguments
   reason: actual and formal argument lists differ in length
 1 error
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$
 
+````
 </details>
 
-## Main02.java
+
+## Main02
 
 ````java
 public class Main02 {
@@ -82,13 +83,14 @@ class C02 extends B02 {
 		super(1);
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main02.javaMain02.java:22: error: constructor B02 in class B02 cannot be applied to given types;
+$ javac Main02.java
+Main02.java:22: error: constructor B02 in class B02 cannot be applied to given types;
 	public C02() {
 	             ^
   required: int
@@ -98,12 +100,13 @@ Main02.java:24: error: call to super must be first statement in constructor
 		super(1);
 		     ^
 2 errors
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$
 
+````
 </details>
 
-## Main03.java
+
+## Main03
 
 ````java
 public class Main03 {
@@ -132,19 +135,22 @@ class C03 extends B03 {
 		System.out.print("C-");
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main03.javamacorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ java Main03
-A-B-C-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$ javac Main03.java
+$ java Main03
+A-B-C-
+$
 
+````
 </details>
 
-## Main04.java
+
+## Main04
 
 ````java
 public class Main04 {
@@ -161,21 +167,23 @@ public class Main04 {
 		System.out.println(value2);
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main04.javamacorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ java Main04
+$ java Main04
 20
 30
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$ javac Main04.java
+$
 
+````
 </details>
 
-## Main05.java
+
+## Main05
 
 ````java
 public class Main05 {
@@ -196,23 +204,25 @@ public class Main05 {
 		Main05 main = new Main05();
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main05.javamacorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ java Main05
+$ javac Main05.java
+$ java Main05
 20
 0
 10
 30
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$
 
+````
 </details>
 
-## Main06.java
+
+## Main06
 
 ````java
 public class Main06 {
@@ -261,25 +271,27 @@ class C06 extends B06 {
         }
 
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main06.javamacorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ java Main06
+$ javac Main06.java
+$ java Main06
 A
 E
 B
 D
 F
 G
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$
 
+````
 </details>
 
-## Main07.java
+
+## Main07
 
 ````java
 public class Main07 {
@@ -303,21 +315,23 @@ class A07 {
 		this.b = b;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main07.javamacorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ java Main07
+$ javac Main07.java
+$ java Main07
 10
 20
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$
 
+````
 </details>
 
-## Main08.java
+
+## Main08
 
 ````java
 public class Main08 {
@@ -341,20 +355,22 @@ class A08 {
 		this.b = b;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ javac Main08.javaMain08.java:15: error: cannot assign to 'this'
+$ javac Main08.java
+Main08.java:15: error: cannot assign to 'this'
 		this = this(20);
 		^
 Main08.java:15: error: call to this must be first statement in constructor
 		this = this(20);
 		           ^
 2 errors
-macorapci@monster:~/CuriousAboutCoding/03-declare-constructor$ 
-````
+$
 
+````
 </details>
+

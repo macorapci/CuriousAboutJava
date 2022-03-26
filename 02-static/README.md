@@ -6,7 +6,8 @@ openjdk 11.0.14 2022-01-18
 OpenJDK Runtime Environment (build 11.0.14+9-Ubuntu-0ubuntu2.20.04)
 OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing) 
 ````
-## Main01.java
+
+## Main01
 
 ````java
 public class Main01 {
@@ -19,23 +20,24 @@ public class Main01 {
 		staticPrint();
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main01.java 
+$ javac Main01.java
 Main01.java:8: error: non-static method staticPrint() cannot be referenced from a static context
 		staticPrint();
 		^
 1 error
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$
 
+````
 </details>
 
-## Main02.java
+
+## Main02
 
 ````java
 public class Main02 {
@@ -48,23 +50,24 @@ public class Main02 {
 		staticPrint();
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main02.java 
+$ javac Main02.java
 Main02.java:4: error: non-static variable name cannot be referenced from a static context
 		System.out.println(name);
 		                   ^
 1 error
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$
 
+````
 </details>
 
-## Main03.java
+
+## Main03
 
 ````java
 public class Main03 {
@@ -83,22 +86,23 @@ public class Main03 {
 class Mehmet03 {
 	public static int value;
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main03.java 
-macorapci@monster:~/CuriousAboutCoding/02-static$ java Main03
+$ javac Main03.java
+$ java Main03
 0
 1
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$
 
+````
 </details>
 
-## Main04java
+
+## Main04
 
 ````java
 public class Main04 {
@@ -116,22 +120,23 @@ public class Main04 {
 class Anil04 {
 	public static int value;
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main04.java 
-macorapci@monster:~/CuriousAboutCoding/02-static$ java Main04
+$ java Main04
 0
 0
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$ javac Main04.java
+$
 
+````
 </details>
 
-## Main05java
+
+## Main05
 
 ````java
 public class Main05 {
@@ -145,23 +150,24 @@ public class Main05 {
 class Anil05 {
 	public static int value;
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main05.java 
+$ javac Main05.java
 Main05.java:4: error: variable anil might not have been initialized
 		System.out.println(anil.value);
 		                   ^
 1 error
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$
 
+````
 </details>
 
-## Main06.java
+
+## Main06
 
 ````java
 public class Main06 {
@@ -175,21 +181,22 @@ public class Main06 {
 		System.out.println(value);
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main06.java 
-macorapci@monster:~/CuriousAboutCoding/02-static$ java Main06
+$ java Main06
 10
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$ javac Main06.java
+$
 
+````
 </details>
 
-## Main07.java
+
+## Main07
 
 ````java
 public class Main07 {
@@ -203,21 +210,22 @@ public class Main07 {
 		System.out.println(value);
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main07.java 
-macorapci@monster:~/CuriousAboutCoding/02-static$ java Main07
+$ java Main07
 10
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$ javac Main07.java
+$
 
+````
 </details>
 
-## Main08.java
+
+## Main08
 
 ````java
 public class Main08 {
@@ -231,23 +239,24 @@ public class Main08 {
 		System.out.println(value);
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main08.java 
+$ javac Main08.java
 Main08.java:5: error: cannot assign a value to final variable value
 		value = 10;
 		^
 1 error
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$
 
+````
 </details>
 
-## Main09.java
+
+## Main09
 
 ````java
 public class Main09 {
@@ -261,21 +270,22 @@ public class Main09 {
 		System.out.println(value);
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main09.java 
-macorapci@monster:~/CuriousAboutCoding/02-static$ java Main09 
+$ java Main09
 10
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$ javac Main09.java
+$
 
+````
 </details>
 
-## Main10.java
+
+## Main10
 
 ````java
 public class Main10 {
@@ -301,18 +311,21 @@ class Mehmet10 {
 		value = 30;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/02-static$ javac Main10.java 
-macorapci@monster:~/CuriousAboutCoding/02-static$ java Main10
+$ javac Main10.java
+$ java Main10
 20
 30
 30
-macorapci@monster:~/CuriousAboutCoding/02-static$ 
-````
+$
 
+````
 </details>
+
+
+

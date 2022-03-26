@@ -6,7 +6,7 @@ openjdk 11.0.14 2022-01-18
 OpenJDK Runtime Environment (build 11.0.14+9-Ubuntu-0ubuntu2.20.04)
 OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing) 
 ````
-## Main01.java
+## Main01
 
 ````java
 public class Main01 {
@@ -23,23 +23,24 @@ public class Main01 {
 		System.out.println("B");
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main01.java
+$ javac Main01.java
 Main01.java:11: error: cannot declare both strings(String[]) and strings(String...) in Main01
 	public void strings(String[] foo) {
 	            ^
 1 error
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
 
-## Main02.java
+
+## Main02
 
 ````java
 public class Main02 {
@@ -58,25 +59,26 @@ public class Main02 {
 		return 1;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main02.java
+$ javac Main02.java
 Note: Main02.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ java Main02
+$ java Main02
 0
 1
 1
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
 
-## Main03.java
+
+## Main03
 
 ````java
 public class Main03 {
@@ -96,26 +98,27 @@ public class Main03 {
 		return 1;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main03.java
+$ javac Main03.java
 Note: Main03.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ java Main03
+$ java Main03
 0
 1
 1
 1
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
 
-## Main04.java
+
+## Main04
 
 ````java
 import java.util.*;
@@ -135,13 +138,13 @@ public class Main04 {
 		return 1;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main04.java
+$ javac Main04.java
 Main04.java:14: error: name clash: bar(List<Integer>) and bar(List<String>) have the same erasure
 	public int bar(List<Integer> numbers) {
 	           ^
@@ -151,12 +154,13 @@ Main04.java:6: error: cannot find symbol
   symbol:   method of(String,String,String)
   location: class Arrays
 2 errors
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
 
-## Main05.java
+
+## Main05
 
 ````java
 public class Main05 {
@@ -174,23 +178,24 @@ public class Main05 {
 		return 1;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main05.java
+$ javac Main05.java
 Main05.java:4: error: illegal start of expression
 		String[] arr = ["aa", "bb", "cc"];
 		               ^
 1 error
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
 
-## Main06.java
+
+## Main06
 
 ````java
 public class Main06 {
@@ -208,21 +213,22 @@ public class Main06 {
 		return 1;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main06.java
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ java Main06
+$ javac Main06.java
+$ java Main06
 0
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
 
-## Main07.java
+
+## Main07
 
 ````java
 public class Main07 {
@@ -240,16 +246,19 @@ public class Main07 {
 		return 1;
 	}
 }
-````
 
+````
 <details>
 <summary>Click For Output!</summary>
 
 ````console
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ javac Main07.java
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ java Main07
+$ javac Main07.java
+$ java Main07
 0
-macorapci@monster:~/CuriousAboutCoding/04-overloading$ 
-````
+$
 
+````
 </details>
+
+
+
