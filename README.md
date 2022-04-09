@@ -13,11 +13,11 @@ OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sha
 ````
 
 ## Topics:
-- [Declare And Initialize](https://github.com/macorapci/CuriousAboutCoding/tree/master/01-declare-and-initialize)
-- [Static](https://github.com/macorapci/CuriousAboutCoding/tree/master/02-static)
-- [Declare Constructor](https://github.com/macorapci/CuriousAboutCoding/tree/master/03-declare-constructor)
-- [Overloading](https://github.com/macorapci/CuriousAboutCoding/tree/master/04-overloading)
-- [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented)
+- [Declare And Initialize](https://github.com/macorapci/CuriousAboutCoding/tree/master/01-declare-and-initialize#declare-and-initialize)
+- [Static](https://github.com/macorapci/CuriousAboutCoding/tree/master/02-static#static)
+- [Declare Constructor](https://github.com/macorapci/CuriousAboutCoding/tree/master/03-declare-constructor#declare-constructor)
+- [Overloading](https://github.com/macorapci/CuriousAboutCoding/tree/master/04-overloading#overloading)
+- [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented#object-oriented)
 
 ## Scripts:
 - For creating `README.md` files, u can use this command: `find ./01-declare-and-initialize/ -name "*.java" | sort | java -jar ./scripts/RunCommand-0.0.1.jar Main | sort | java -jar ./scripts/File-0.0.1.jar Main > output.txt`
