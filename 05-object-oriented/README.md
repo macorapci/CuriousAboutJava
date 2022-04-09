@@ -111,9 +111,9 @@ class Imp003 implements Interface003 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main003.java
 $ java Main003
 Override method
+$ javac Main003.java
 $
 
 ````
@@ -151,10 +151,10 @@ class Tool004 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main004.java
 $ java Main004
 0
 0
-$ javac Main004.java
 $
 
 ````
@@ -184,8 +184,8 @@ class Cat005 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main005.java
 $ java Main005
+$ javac Main005.java
 $
 
 ````
@@ -451,11 +451,11 @@ enum Day012 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main012.java
 $ java Main012
 1
 2
 3
-$ javac Main012.java
 $
 
 ````
@@ -602,9 +602,9 @@ class Child016 extends Parent016 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main016.java
 $ java Main016
 20
-$ javac Main016.java
 $
 
 ````
@@ -689,9 +689,9 @@ class Impl018 implements FuncInterfaceOne018, FuncInterfaceTwo018 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main018.java
 $ java Main018
 30
+$ javac Main018.java
 $
 
 ````
@@ -776,9 +776,9 @@ class Impl020 implements FuncInterfaceOne020, FuncInterfaceTwo020 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main020.java
 $ java Main020
 10
+$ javac Main020.java
 $
 
 ````
@@ -895,9 +895,9 @@ class Child023 extends Parent023 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main023.java
 $ java Main023
 Parent, Child, Parent
+$ javac Main023.java
 $
 
 ````
@@ -1037,9 +1037,9 @@ class Parent027 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main027.java
 $ java Main027
 21
-$ javac Main027.java
 $
 
 ````
@@ -1080,6 +1080,287 @@ Main028.java:3: error: Impl028 is abstract; cannot be instantiated
 		var impl = new Impl028();
 		           ^
 1 error
+$
+
+````
+</details>
+
+
+## Main029
+
+````java
+public class Main029 {
+	public static void main(String... args) {
+		var impl = new Impl029();
+		impl.getParent();
+	}
+}
+
+interface Service029 {
+	Parent029 getParent();
+}
+
+class Parent029 {}
+
+class Child029 extends Parent029 {}
+
+class Impl029 implements Service029 {
+	public Parent029 getParent() {
+		return new Child029();
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main029
+$ javac Main029.java
+$
+
+````
+</details>
+
+
+## Main030
+
+````java
+public class Main030 {
+	public static void main(String... args) {
+		var foo = new Foo030();
+		var value = foo.getBar();
+		System.out.println(value);
+	}
+}
+
+
+class Foo030 {
+	int bar = 20;
+
+	default int getBar() {
+		print();
+		return bar;
+	}
+
+	static void print() {
+		System.out.println("Good word");
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main030.java
+Main030.java:13: error: modifier default not allowed here
+	default int getBar() {
+	            ^
+1 error
+$
+
+````
+</details>
+
+
+## Main031
+
+````java
+public class Main031 {
+	public static void main(String... args) {
+		System.out.println(new Foo031(30).bar);
+	}
+}
+
+class Foo031 {
+	public static int bar = 10;
+	
+	public void Foo031(int bar) {
+		this.bar = bar;
+	}
+}
+
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main031.java
+Main031.java:3: error: constructor Foo031 in class Foo031 cannot be applied to given types;
+		System.out.println(new Foo031(30).bar);
+		                   ^
+  required: no arguments
+  found: int
+  reason: actual and formal argument lists differ in length
+1 error
+$
+
+````
+</details>
+
+
+## Main032
+
+````java
+public class Main032 {
+	static interface Foo032 { }
+	static class Bar032 implements Foo032 { }
+
+	private static void print(Foo032 foo) {
+		System.out.println("10");
+	}
+
+	private static void print(Bar032 bar) {
+		System.out.println("20");
+	}
+
+	public static void main(String... args) {
+		Foo032 foo = new Bar032();
+		Bar032 bar = new Bar032();
+
+		print(foo);
+		print(bar);
+	}
+}
+
+
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main032
+10
+20
+$ javac Main032.java
+$
+
+````
+</details>
+
+
+## Main033
+
+````java
+public class Main033 {
+	public static void main(String... args) {
+		var bar = new Bar033();
+        	bar.printValue();
+	}
+}
+
+interface Foo033 {
+	public default void printValue() {
+		System.out.println(getValue());
+	}
+
+	private static String getValue() {
+		return "Value";
+	}
+}
+
+class Bar033 {
+	public void printValue() {
+		System.out.println(getValue() + "Value");
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main033.java
+Main033.java:20: error: cannot find symbol
+		System.out.println(getValue() + "Value");
+		                   ^
+  symbol:   method getValue()
+  location: class Bar033
+1 error
+$
+
+````
+</details>
+
+
+## Main034
+
+````java
+public class Main034 {
+	public static void main(String... args) {
+		var child = new Child034();
+		System.out.println(child.foo);
+	}
+}
+
+class Parent034 {
+	public int foo;
+
+	Parent034(int foo) {
+		this.foo = foo;
+	}
+}
+
+class Child034 extends Parent034 {
+	Child034(int value) {
+		super(value + 1);
+	}
+
+	Child034() {
+		this(20);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main034.java
+$ java Main034
+21
+$
+
+````
+</details>
+
+
+## Main035
+
+````java
+public class Main035 {
+	public static void main(String... args) {
+		var value = Animal035.CAT.makeSound();
+		System.out.println(value);
+	}
+}
+
+enum Animal035 {
+	CAT {
+		public String makeSound() {
+			return "MEOW!";
+		}
+	},
+	DOG {
+		public String makeSound() {
+			return "WOOF!";
+		}
+	};
+
+	public abstract String makeSound();
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main035
+MEOW!
+$ javac Main035.java
 $
 
 ````

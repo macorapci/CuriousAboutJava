@@ -20,4 +20,4 @@ OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sha
 - [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented)
 
 ## Scripts:
-- For creating `README.md` files, u can use this command: `find ./01-declare-and-initialize/ -name "*.java" | sort | java -jar RunCommand-0.0.1.jar Main | sort | java -jar File-0.0.1.jar Main`
+- For creating `README.md` files, u can use this command: `find ./01-declare-and-initialize/ -name "*.java" | sort | java -jar ./scripts/RunCommand-0.0.1.jar Main | sort | java -jar ./scripts/File-0.0.1.jar Main > output.txt`
