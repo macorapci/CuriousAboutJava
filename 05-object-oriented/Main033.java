@@ -15,7 +15,7 @@ interface Foo033 {
 	}
 }
 
-class Bar033 {
+class Bar033 implements Foo033 {
 	public void printValue() {
 		System.out.println(getValue() + "Value");
 	}
