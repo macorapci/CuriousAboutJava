@@ -1367,4 +1367,617 @@ $
 </details>
 
 
+## Main036
+
+````java
+public class Main036 {
+	public static void main(String... args) {
+		var var = new Foo036();
+		System.out.println(var.value);	
+	}
+}
+
+class Foo036 { 
+	public int value;
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main036
+0
+$ javac Main036.java
+$
+
+````
+</details>
+
+
+## Main037
+
+````java
+public class Main037 {
+	public static void main(String ... args) {
+		Foo037.Bar037.Car037 value = new Foo037().new Bar037().new Car037();
+		value.printValues(30);
+	}
+}
+
+class Foo037 {
+	private int level = 1;
+
+	class Bar037 {
+		private int level = 2;
+
+		class Car037 {
+			private int level = 3;
+
+			public void printValues(int level) {
+				System.out.println(level);
+				System.out.println(Foo037.Bar037.this.level);
+				System.out.println(Bar037.this.level);
+			}
+		}
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main037
+30
+2
+2
+$ javac Main037.java
+$
+
+````
+</details>
+
+
+## Main038
+
+````java
+public class Main038 {
+	public static void main(String... args) {
+		Foo038 foo = () -> System.out.println("overriden");
+		foo.method2();
+	}
+}
+
+interface Foo038 {
+	void method1() {
+		method2();
+	}
+
+	default void method2() {
+		System.out.println("interface method");
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main038.java
+Main038.java:9: error: interface abstract methods cannot have body
+	void method1() {
+	               ^
+1 error
+$
+
+````
+</details>
+
+
+## Main039
+
+````java
+public class Main038 {
+	public static void main(String... args) {
+		var foo = Foo038.BAR;
+		foo.setValue(30);
+
+		System.out.println(foo.getValue());
+		System.out.println(Foo038.BAR.getValue());
+		System.out.println(Foo038.VAR.getValue());
+	}
+}
+
+enum Foo038 {
+	BAR(10), VAR(20);
+
+	private int value;
+
+	private Foo038(int value) {
+		this.value = value;
+	}
+
+	public int getValue() {
+		return this.value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main039.java
+Main039.java:1: error: class Main038 is public, should be declared in a file named Main038.java
+public class Main038 {
+       ^
+1 error
+$
+
+````
+</details>
+
+
+## Main040
+
+````java
+public class Main040 {
+	public static void main(String... args) {
+		var foo = new Foo040();
+		foo.bar();
+	}
+}
+
+class Foo040 {
+	public void bar() {
+		System.out.println("barBAR");
+	}
+
+	public int bar(int value) {
+		System.out.println("BARbar");
+		return 10;
+	}
+
+	public int bar(int value, boolean var) {
+		System.out.println("barbar");
+		return 20;
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main040.java
+$ java Main040
+barBAR
+$
+
+````
+</details>
+
+
+## Main041
+
+````java
+public class Main041 {
+	public static void main(String... args) {
+		System.out.println("Compiled!");
+	}
+}
+
+interface Foo041 {
+	public static int bar() {
+		return bar();
+	}
+
+	public abstract int anotherBar() {
+		return anotherBar();
+	}
+
+	public default int defaultBar() {
+		return defaultBar();
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main041.java
+Main041.java:12: error: interface abstract methods cannot have body
+	public abstract int anotherBar() {
+	                                 ^
+1 error
+$
+
+````
+</details>
+
+
+## Main042
+
+````java
+public class Main042 {
+	public static void main(String... args) {
+		int value = 20;
+
+		final class Foo042 extends Bar042 {
+			public int getValue() {
+				return value;
+			}
+		}
+
+		System.out.println(new Foo042().getValue());
+		value = 10;
+	}
+}
+
+class Bar042 { }
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main042.java
+Main042.java:7: error: local variables referenced from an inner class must be final or effectively final
+				return value;
+				       ^
+1 error
+$
+
+````
+</details>
+
+
+## Main043
+
+````java
+public class Main043 {
+        public static void main(String... args) {
+                int value = 20;
+
+                final class Foo043 extends Bar043 {
+                        public int getValue() {
+                                return value;
+                        }
+                }
+
+                System.out.println(new Foo043().getValue());
+        }
+}       
+
+class Bar043 { }
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main043
+20
+$ javac Main043.java
+$
+
+````
+</details>
+
+
+## Main044
+
+````java
+public class Main044 {
+	public static void main(String... args) {
+		System.out.println(Foo044.bar(2f));
+	}
+}
+
+class Foo044 {
+	public static int bar(int value) {
+		return 10;
+	}
+
+	public static int bar(double value) {
+		return 20;
+	}
+
+	public static int bar(Float value) {
+		return 30;
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main044
+20
+$ javac Main044.java
+$
+
+````
+</details>
+
+
+## Main045
+
+````java
+public class Main045 {
+	public static void main(String... args) {
+		class Foo045 {
+			public int foo = 10;
+		}
+
+		class Bar045 extends Foo045{
+			public int bar = 20;
+		}
+
+		System.out.println(new Bar045().foo);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main045.java
+$ java Main045
+10
+$
+
+````
+</details>
+
+
+## Main046
+
+````java
+public class Main046 {
+	public static void main(String... args) {
+		System.out.println("XD");
+	}
+}
+
+class _ {}
+
+class Str3@m {}
+
+class CallBack$ {}
+
+class _Value_ {}
+
+class foo_ {}
+
+class Bar50 {}
+
+class 50Bar {}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main046.java
+Main046.java:7: error: as of release 9, '_' is a keyword, and may not be used as an identifier
+class _ {}
+      ^
+Main046.java:9: error: '{' expected
+class Str3@m {}
+          ^
+Main046.java:9: error: illegal start of type
+class Str3@m {}
+             ^
+Main046.java:19: error: <identifier> expected
+class 50Bar {}
+     ^
+Main046.java:19: error: reached end of file while parsing
+class 50Bar {}
+              ^
+5 errors
+$
+
+````
+</details>
+
+
+## Main047
+
+````java
+public class Main047 {
+	public static void main(String... args) {
+		A047 foo = new C047();
+		System.out.println(foo.bar);
+	}
+}
+
+class A047 {
+	public final int bar = 10; 
+}
+
+class B047 extends A047 {
+	public final int bar = 20;
+}
+
+class C047 extends B047 {
+	public final int bar = 30;
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main047.java
+$ java Main047
+10
+$
+
+````
+</details>
+
+
+## Main048
+
+````java
+public class Main048 {
+	public static final void main(String... args) {
+		System.out.println(new Bar048().getValue());
+	}	
+}
+
+
+class Foo048 {
+	private final String getValue() {
+		return "Foo";
+	}
+}
+
+class Bar048 extends Foo048 {
+	public String getValue() {
+		return "Bar";
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main048.java
+$ java Main048
+Bar
+$
+
+````
+</details>
+
+
+## Main049
+
+````java
+public class Main049 {
+        public static final void main(String... args) {
+                System.out.println(new Bar049().getValue());
+        }
+}
+
+
+class Foo049 {
+        private final String getValue() {
+                return "Foo";
+        }
+}
+
+class Bar049 extends Foo049 {
+        protected String getValue() {
+                return "Bar";
+        }
+}
+
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main049.java
+$ java Main049
+Bar
+$
+
+````
+</details>
+
+
+## Main050
+
+````java
+public class Main050 {
+	public static void main() {
+		System.out.println(new Foo050().value);	
+	}
+}
+
+class Foo050 {
+	public final String value;
+
+	public Foo050() {
+		this("Bar");
+		value = "new bar";
+	}
+
+	public Foo050(String value) {
+		this.value = value;	
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main050.java
+Main050.java:12: error: variable value might already have been assigned
+		value = "new bar";
+		^
+1 error
+$
+
+````
+</details>
+
+
+## Main051
+
+````java
+public class Main051 {
+	public static void main(String... args) {
+		var foo = new Foo051();
+		foo.bar();
+		foo.bar();
+		foo.bar();
+		System.out.println(foo.value);
+	}
+}
+
+class Foo051 {
+	static int value = 5;
+	
+	public boolean bar() {
+		if (value < 4) {
+			value--;
+			return false;
+		} else if (value >= 4) {
+			value++;
+			return true;
+		}
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main051.java
+Main051.java:22: error: missing return statement
+	}
+	^
+1 error
+$
+
+````
+</details>
+
+
 
