@@ -1980,4 +1980,672 @@ $
 </details>
 
 
+## Main052
+
+````java
+public class Main052 {
+	public static void main(String... args) {
+		new Foo052();
+	}
+}
+
+class Foo052 extends Bar052 {
+	{ System.out.println("4"); }
+
+	public Foo052() {
+		super("value");
+		System.out.println("5");
+	}
+}
+
+class Bar052 {
+	static { System.out.println("1"); }
+
+	public Bar052(String value) {
+		super();
+		System.out.println("2");
+	}
+
+	{ System.out.println("3");}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main052
+1
+3
+2
+4
+5
+$ javac Main052.java
+$
+
+````
+</details>
+
+
+## Main053
+
+````java
+public class Main053 {
+	public static void main(String... args) {
+		abstract class AbstractFoo053 { };
+
+		class Foo053 extends AbstractFoo053 {
+			private String value = "10";
+
+			public String getValue() {
+				return value;
+			}
+		}
+
+		var foo = new Foo053() {
+			public String getValue() {
+				return "20";
+			}
+		};
+
+		System.out.println(foo.getValue() + ", " + value);		
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main053.java
+Main053.java:19: error: cannot find symbol
+		System.out.println(foo.getValue() + ", " + value);		
+		                                           ^
+  symbol:   variable value
+  location: class Main053
+1 error
+$
+
+````
+</details>
+
+
+## Main054
+
+````java
+public class Main054 {
+        public static void main(String... args) {
+                abstract class AbstractFoo054 { };
+
+                class Foo054 extends AbstractFoo054 {
+                        private String value = "10";
+
+                        public String getValue() {
+                                return value;
+                        }
+                };
+
+                var foo = new Foo054() {
+                        public String getValue() {
+                                return "20";
+                        }
+                };
+
+                System.out.println(foo.getValue());
+        }
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main054.java
+$ java Main054
+20
+$
+
+````
+</details>
+
+
+## Main055
+
+````java
+import java.io.FileNotFoundException;
+
+public class Main055 {
+	public static void main(String... args) {
+		System.out.println(new Bar055().getValue());
+	}
+}
+
+interface Foo055 {
+	String getValue();
+}
+
+class Bar055 implements Foo055 {
+	public String getValue() throws FileNotFoundException {
+		return "20";
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main055.java
+Main055.java:5: error: unreported exception FileNotFoundException; must be caught or declared to be thrown
+		System.out.println(new Bar055().getValue());
+		                                        ^
+Main055.java:14: error: getValue() in Bar055 cannot implement getValue() in Foo055
+	public String getValue() throws FileNotFoundException {
+	              ^
+  overridden method does not throw FileNotFoundException
+2 errors
+$
+
+````
+</details>
+
+
+## Main056
+
+````java
+public class Main056 {
+	public static void main(String... args) {
+		System.out.println(new Bar056().getValue());
+	}
+}
+
+interface Foo056 {
+	String getValue();
+}
+
+class Bar056 implements Foo056 {
+	public String getValue() throws RuntimeException {
+		return "20";
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main056
+20
+$ javac Main056.java
+$
+
+````
+</details>
+
+
+## Main057
+
+````java
+public class Main057 {
+	public static void main(String... args) {
+		System.out.println(new Bar057().getValue());
+	}
+}
+
+interface Foo057 {
+	Integer interfaceValue;
+	String getValue();
+
+	public default Integer getInterfaceValue() {
+                return interfaceValue;
+        }
+}
+
+class Bar057 implements Foo057 {
+	public String getValue() throws RuntimeException {
+		System.out.println(getInterfaceValue());
+		return "20";
+	}
+}
+
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main057.java
+Main057.java:8: error: = expected
+	Integer interfaceValue;
+	                      ^
+1 error
+$
+
+````
+</details>
+
+
+## Main058
+
+````java
+public class Main058 {
+	public static void main(String... args) {
+		System.out.println(new Foo058().getValue());
+	}
+}
+
+class Foo058 {
+	private final int finalBar;
+	private static int staticBar;
+
+	{ this.finalBar = 20; }
+	{ this.staticBar = 30; }
+
+	public int getValue() {
+		return this.finalBar/this.staticBar;
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main058
+0
+$ javac Main058.java
+$
+
+````
+</details>
+
+
+## Main059
+
+````java
+public class Main059 {
+	public static void main(String... args) {
+		var foo = new Foo059() {
+			@Override
+			void print() {
+				System.out.println("BBBB");
+			}
+		}
+	}
+}
+
+interface Foo059 {
+	default void print() {
+		System.out.println("AAAA");
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main059.java
+Main059.java:8: error: ';' expected
+		}
+		 ^
+1 error
+$
+
+````
+</details>
+
+
+## Main060
+
+````java
+public class Main060 {
+	public static void main(String... args) {
+		new Boo060().print(10);
+	}
+}
+
+interface Foo060 {
+	void print(int value);
+}
+
+abstract class Bar060 {
+	abstract void print(int value);
+}
+
+final class Boo060 extends Bar060 implements Foo060 {
+	final public void print(int value) {
+		int anotherValue = 5;
+
+		class Coo060 {
+			int getValue() {
+				return anotherValue + value;
+			}
+		}
+
+		System.out.println(new Coo060().getValue());
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main060
+15
+$ javac Main060.java
+$
+
+````
+</details>
+
+
+## Main061
+
+````java
+public class Main061 {
+	public static void main(String... values) {
+		Foo061.ONE.print();
+	}
+}
+
+enum Foo061 {
+	ONE(1) {
+		public void print() {
+			System.out.println("ONE");
+		}	
+	},
+	TWO(2) {
+		public void print() {
+                        System.out.println("TWO");
+                }
+	},
+	THREE(3) {
+		public void print() {
+                        System.out.println("THREE");
+                }
+	};
+
+	public int value;
+
+	Foo061(int value) {
+		this.value = value;
+	}
+
+	public int getValue() {
+		return this.value;
+	}
+
+	protected abstract void print();
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main061
+ONE
+$ javac Main061.java
+$
+
+````
+</details>
+
+
+## Main062
+
+````java
+public class Main062 {
+	public static void main(String... values) {
+		Foo062.ONE.print();
+	}
+}
+
+enum Foo062 {
+	ONE(1) {
+		public void print() {
+			System.out.println("ONE");
+		}	
+	},
+	TWO(2) {
+		protected void print() {
+                        System.out.println("TWO");
+                }
+	},
+	THREE(3) {
+		void print() {
+                        System.out.println("THREE");
+                }
+	},
+	FOUR(4) {
+                private void print() {
+                        System.out.println("FOUR");
+                }
+        };
+
+	public int value;
+
+	Foo062(int value) {
+		this.value = value;
+	}
+
+	public int getValue() {
+		return this.value;
+	}
+
+	protected abstract void print();
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main062.java
+Main062.java:19: error: print() in <anonymous Foo062$3> cannot override print() in Foo062
+		void print() {
+		     ^
+  attempting to assign weaker access privileges; was protected
+Main062.java:24: error: print() in <anonymous Foo062$4> cannot override print() in Foo062
+                private void print() {
+                             ^
+  attempting to assign weaker access privileges; was protected
+2 errors
+$
+
+````
+</details>
+
+
+## Main063
+
+````java
+public class Main063 {
+	public static void main(String... vargs) {
+		System.out.println(new Foo063(10).value);
+	}
+}
+
+class Foo063 {
+	public int value;
+
+	public Foo063(int value) {
+		this(null);
+	}
+
+	public Foo063(String value) {
+		this(20);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main063.java
+Main063.java:10: error: recursive constructor invocation
+	public Foo063(int value) {
+	       ^
+1 error
+$
+
+````
+</details>
+
+
+## Main064
+
+````java
+public class Main064 {
+	public static void main(String... foo) {
+		var bar = new Bar064();
+		bar.fValue = 10;
+		bar.sValue = "Value";
+		bar.print();
+	}
+}
+
+class Bar064 {
+	float fValue;
+	String sValue;
+	
+	void print() {
+		System.out.println(fValue + " - " + sValue);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main064.java
+$ java Main064
+10.0 - Value
+$
+
+````
+</details>
+
+
+## Main065
+
+````java
+public class Main065 {
+	public static void main(String... value) {
+		var k = new Bar065();
+		System.out.println(k.getSuperValue() + ", " + k.getValue());
+	}
+}
+
+class Foo065 {
+	protected final int value = 10;
+}
+
+class Bar065 extends Foo065 {
+	private int value = 30;
+
+	public int getValue() {
+		return this.value;
+	}
+
+	public int getSuperValue() {
+		return super.value;
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main065
+10, 30
+$ javac Main065.java
+$
+
+````
+</details>
+
+
+## Main066
+
+````java
+public class Main066 {
+        public static void main(String... value) {
+                var k = new Bar066();
+		System.out.println(((Foo066)k).value);
+                System.out.println(k.getValue());
+        }
+}
+
+class Foo066 {
+        protected final int value = 10;
+}
+
+class Bar066 extends Foo066 {
+        private int value = 30;
+
+        public int getValue() {
+                return this.value;
+        }
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main066
+10
+30
+$ javac Main066.java
+$
+
+````
+</details>
+
+
+## Main067
+
+````java
+public class Main067 {
+        public static void main(String... value) {
+                var k = new Bar067();
+		System.out.println(k.value);
+                System.out.println(k.getValue());
+        }
+}
+
+class Foo067 {
+        protected final int value = 10;
+}
+
+class Bar067 extends Foo067 {
+        private int value = 30;
+
+        public int getValue() {
+                return this.value;
+        }
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main067.java
+Main067.java:4: error: value has private access in Bar067
+		System.out.println(k.value);
+		                    ^
+1 error
+$
+
+````
+</details>
+
+
 
