@@ -5,11 +5,12 @@ Select a topic (ex. `01-declare-and-initialize`) and try to answer these questio
 - What's will be output?
 
 ## Topics:
-- [Declare And Initialize](https://github.com/macorapci/CuriousAboutCoding/tree/master/01-declare-and-initialize#declare-and-initialize)
-- [Static](https://github.com/macorapci/CuriousAboutCoding/tree/master/02-static#static)
-- [Declare Constructor](https://github.com/macorapci/CuriousAboutCoding/tree/master/03-declare-constructor#declare-constructor)
-- [Overloading](https://github.com/macorapci/CuriousAboutCoding/tree/master/04-overloading#overloading)
-- [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented#object-oriented)
+- [Declare And Initialize](https://github.com/macorapci/CuriousAboutCoding/tree/master/01-declare-and-initialize/README.md)
+- [Static](https://github.com/macorapci/CuriousAboutCoding/tree/master/02-static/README.md)
+- [Declare Constructor](https://github.com/macorapci/CuriousAboutCoding/tree/master/03-declare-constructor/README.md)
+- [Overloading](https://github.com/macorapci/CuriousAboutCoding/tree/master/04-overloading/README.md)
+- [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented/README.md)
+- [Exception](https://github.com/macorapci/CuriousAboutCoding/tree/master/06-exception/README.md)
 
 ## Java Version
  ````console
