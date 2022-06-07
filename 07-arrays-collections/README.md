@@ -1142,4 +1142,573 @@ $
 </details>
 
 
+## Main029
+
+````java
+import java.util.*;
+
+public class Main029 {
+	public static void main(String... args) {
+		List<Foo029> list = new ArrayList<>();
+		list.add(new Foo029(5));
+		list.add(new Foo029(2));
+		list.add(new Foo029(-5));
+		list.add(new Foo029(0));
+		list.add(new Foo029(30));
+
+		System.out.println("Before : " + list);
+		Collections.sort(list);
+		System.out.println("After  : " + list);
+	}
+}
+
+class Foo029 implements Comparable<Foo029> {
+	public int value;
+	
+	public Foo029(int value) {
+		this.value = value;
+	}
+
+	@Override
+	public int compareTo(Foo029 foo) {
+		return this.value - foo.value;
+	}
+
+	@Override
+	public String toString() {
+		return "Foo { value= " + this.value + " }";
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main029
+Before : [Foo { value= 5 }, Foo { value= 2 }, Foo { value= -5 }, Foo { value= 0 }, Foo { value= 30 }]
+After  : [Foo { value= -5 }, Foo { value= 0 }, Foo { value= 2 }, Foo { value= 5 }, Foo { value= 30 }]
+$ javac Main029.java
+$
+
+````
+</details>
+
+
+## Main030
+
+````java
+import java.util.*;
+
+public class Main030 {
+	public static void main(String... args) {
+		var setOf = Set.of("AA", "BB", "CC");
+		var setCopyOf = Set.copyOf(setOf);
+		System.out.println(setCopyOf);
+	}
+}
+
+
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main030.java
+$ java Main030
+[BB, CC, AA]
+$
+
+````
+</details>
+
+
+## Main031
+
+````java
+import java.util.*;
+
+public class Main031 {
+	public static void main(String... args) {
+		var os = new String[] {"DD", "BB", "CC"};
+		Arrays.sort(os);
+
+		System.out.println(Arrays.binarySearch(os, "FF"));
+		System.out.println(Arrays.binarySearch(os, "BB"));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main031.java
+$ java Main031
+-4
+0
+$
+
+````
+</details>
+
+
+## Main032
+
+````java
+import java.util.*;
+
+public class Main032 {
+	public static void main(String... args) {
+		var os = new String[] {"DD", "BB", "CC"};
+		Arrays.sort(os);
+
+		System.out.println(Arrays.binarySearch(os, "AA"));
+		System.out.println(Arrays.binarySearch(os, "BB"));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main032.java
+$ java Main032
+-1
+0
+$
+
+````
+</details>
+
+
+## Main033
+
+````java
+import java.util.*;
+
+public class Main033 {
+	public static void main(String... args) {
+		var os = new String[] {"DD", "BB", "CC"};
+		Arrays.sort(os);
+
+		System.out.println(Arrays.binarySearch(os, "CF"));
+		System.out.println(Arrays.binarySearch(os, "BB"));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main033.java
+$ java Main033
+-3
+0
+$
+
+````
+</details>
+
+
+## Main034
+
+````java
+import java.util.*;
+
+public class Main034 {
+	public static void main(String... args) {
+		var q = new ArrayDeque<String>();
+		q.offerFirst("AA");
+		q.offer("BB");
+		q.offerLast("CC");
+	
+		System.out.println(q);
+		System.out.println(q.poll());
+		System.out.println(q.removeFirst());
+		System.out.println(q.size());
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main034.java
+$ java Main034
+[AA, BB, CC]
+AA
+BB
+1
+$
+
+````
+</details>
+
+
+## Main035
+
+````java
+import java.util.*;
+
+public class Main035 {
+	public static void main(String... args) {
+		int [] array1d, array2d[];
+		array2d = new int[2][3];
+		System.out.println(Arrays.deepToString(array2d));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main035.java
+$ java Main035
+[[0, 0, 0], [0, 0, 0]]
+$
+
+````
+</details>
+
+
+## Main036
+
+````java
+import java.util.*;
+
+public class Main036 {
+	public static void main(String... args) {
+		var one = new HashSet<>();
+		var two = new HashSet<Object>();
+		HashSet<> three = new HashSet<Object>();
+		HashSet<Object> four = new HashSet<>();
+		HashSet<Object> five = new HashSet<Object>();
+	
+		System.out.println("Compiled :)");
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main036.java
+Main036.java:7: error: illegal start of type
+		HashSet<> three = new HashSet<Object>();
+		        ^
+1 error
+$
+
+````
+</details>
+
+
+## Main037
+
+````java
+import java.util.*;
+
+public class Main037 {
+	public static void main(String... args) {
+		var foo = new int[] {1, 2, 3};
+		var bar = new int[] {1, 3, 3};
+
+		System.out.println(Arrays.compare(foo, bar));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main037
+-1
+$ javac Main037.java
+$
+
+````
+</details>
+
+
+## Main038
+
+````java
+import java.util.*;
+
+public class Main038 {
+        public static void main(String... args) {
+                var foo = new int[] {1, 3, 3};
+                var bar = new int[] {1, 2, 3};
+
+                System.out.println(Arrays.compare(foo, bar));
+        }
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main038.java
+$ java Main038
+1
+$
+
+````
+</details>
+
+
+## Main039
+
+````java
+import java.util.*;
+
+public class Main039 {
+        public static void main(String... args) {
+                var foo = new int[] {1, 2, 3, 4};
+                var bar = new int[] {1, 2, 3};
+
+                System.out.println(Arrays.compare(foo, bar));
+        }
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main039.java
+$ java Main039
+1
+$
+
+````
+</details>
+
+
+## Main040
+
+````java
+import java.util.*;
+
+public class Main040 {
+        public static void main(String... args) {
+                var foo = new int[] {1, 2, 3, 4};
+                var bar = new int[] {1, 3, 3};
+
+                System.out.println(Arrays.compare(foo, bar));
+        }
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main040.java
+$ java Main040
+-1
+$
+
+````
+</details>
+
+
+## Main041
+
+````java
+import java.util.*;
+
+public class Main041 {
+        public static void main(String... args) {
+                var foo = new int[] {1, 2, 3};
+                var bar = new int[] {1, 2, 3};
+
+                System.out.println(Arrays.compare(foo, bar));
+        }
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main041.java
+$ java Main041
+0
+$
+
+````
+</details>
+
+
+## Main042
+
+````java
+import java.util.*;
+
+public class Main042 {
+	public static void main(String... args) {
+		var foo = List.of("AA", "BBB", "CC", "DDDD");
+		Collections.sort(foo, Comparator.comparing(String::length));
+		System.out.println(foo.get(0));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main042
+Exception in thread "main" java.lang.UnsupportedOperationException
+	at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:72)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableList.sort(ImmutableCollections.java:111)
+	at java.base/java.util.Collections.sort(Collections.java:179)
+	at Main042.main(Main042.java:6)
+$ javac Main042.java
+$
+
+````
+</details>
+
+
+## Main043
+
+````java
+import java.util.*;
+
+public class Main043 {
+	public static void main(String... args) {
+		var foo = new int[] {5, 3, 0, -5, 20, 10, 30, -50};
+		System.out.println(Arrays.binarySearch(foo, 0));
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main043.java
+$ java Main043
+-5
+$
+
+````
+</details>
+
+
+## Main044
+
+````java
+public class Main044 {
+	public static void main(String... args) {
+		var one = new Wrapper<Foo044>();
+		var two = new Wrapper<Bar044>();
+		var three = new Wrapper<Boo044>();	
+	}
+}
+
+class Foo044 {}
+class Bar044 extends Foo044 {}
+class Boo044 {}
+class Wrapper<? extends Foo044> {}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main044.java
+Main044.java:12: error: <identifier> expected
+class Wrapper<? extends Foo044> {}
+              ^
+1 error
+$
+
+````
+</details>
+
+
+## Main045
+
+````java
+public class Main045 {
+        public static void main(String... args) {
+                var one = new Wrapper<Foo045>();
+                var two = new Wrapper<Bar045>();
+                var three = new Wrapper<Boo045>();
+        }
+}
+
+class Foo045 {}
+class Bar045 extends Foo045 {}
+class Boo045 {}
+class Wrapper<T extends Foo045> {}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main045.java
+Main045.java:5: error: type argument Boo045 is not within bounds of type-variable T
+                var three = new Wrapper<Boo045>();
+                                        ^
+  where T is a type-variable:
+    T extends Foo045 declared in class Wrapper
+1 error
+$
+
+````
+</details>
+
+
+## Main046
+
+````java
+import java.util.*;
+
+public class Main046 {
+	public static void main(String... args) {
+		List<Character> foo = new ArrayList<>();
+		foo.add('a');
+		foo.add('b');
+		foo.add('c');
+
+		foo.clear();
+		foo.remove(0);
+
+		System.out.println(foo.isEmpty());	
+		System.out.println(foo.length());
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main046.java
+Main046.java:14: error: cannot find symbol
+		System.out.println(foo.length());
+		                      ^
+  symbol:   method length()
+  location: variable foo of type List<Character>
+1 error
+$
+
+````
+</details>
+
+
 

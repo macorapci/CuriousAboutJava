@@ -11,6 +11,8 @@ Select a topic (ex. `01-declare-and-initialize`) and try to answer these questio
 - [Overloading](https://github.com/macorapci/CuriousAboutCoding/tree/master/04-overloading/README.md)
 - [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented/README.md)
 - [Exception](https://github.com/macorapci/CuriousAboutCoding/tree/master/06-exception/README.md)
+- [Arrays and Collections](https://github.com/macorapci/CuriousAboutJava/blob/master/07-arrays-collections/README.md)
+
 
 ## Java Version
  ````console
