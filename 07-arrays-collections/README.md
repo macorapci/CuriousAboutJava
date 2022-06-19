@@ -73,9 +73,9 @@ class Generic002<T> {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main002.java
 $ java Main002
 Hello
-$ javac Main002.java
 $
 
 ````
@@ -109,9 +109,9 @@ class Generic003<Bar> {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main003.java
 $ java Main003
 Hello
-$ javac Main003.java
 $
 
 ````
@@ -145,9 +145,9 @@ class Generic004<Generic004> {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main004.java
 $ java Main004
 Hello
+$ javac Main004.java
 $
 
 ````
@@ -241,9 +241,9 @@ public class Main007 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main007.java
 $ java Main007
 2
-$ javac Main007.java
 $
 
 ````
@@ -275,10 +275,10 @@ public class Main008 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main008.java
 $ java Main008
 21
 4
+$ javac Main008.java
 $
 
 ````
@@ -311,9 +311,9 @@ public class Main009 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main009.java
 $ java Main009
 [21, 20, 0, 10, 11]
+$ javac Main009.java
 $
 
 ````
@@ -345,10 +345,10 @@ public class Main010 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main010.java
 $ java Main010
 21
 3
-$ javac Main010.java
 $
 
 ````
@@ -415,10 +415,10 @@ public class Main012 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main012.java
 $ java Main012
 21
 3
+$ javac Main012.java
 $
 
 ````
@@ -450,10 +450,10 @@ public class Main013 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main013.java
 $ java Main013
 21
 4
+$ javac Main013.java
 $
 
 ````
@@ -703,11 +703,11 @@ public class Main019 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main019.java
 $ java Main019
 4
 -5
 -5
-$ javac Main019.java
 $
 
 ````
@@ -809,9 +809,9 @@ class Foo021 implements Comparable<Foo021> {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main021.java
 $ java Main021
 Before= [Foo{value= AAA }, Foo{value= BBB }, Foo{value= CCC }, Foo{value= AAA }]
-$ javac Main021.java
 $
 
 ````
@@ -859,10 +859,10 @@ class Foo022 implements Comparable<Foo022> {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main022.java
 $ java Main022
 Before= [Foo{value= AAA }, Foo{value= BBB }, Foo{value= CCC }, Foo{value= AAA }]
 After = [Foo{value= AAA }, Foo{value= BBB }, Foo{value= CCC }, Foo{value= AAA }]
-$ javac Main022.java
 $
 
 ````
@@ -992,13 +992,13 @@ public class Main025 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main025.java
 $ java Main025
 searchA= 0
 searchD= -4
 mismatchSameArray= -1
 mismatch= 1
 mismatchLongArray= 3
+$ javac Main025.java
 $
 
 ````
@@ -1025,9 +1025,9 @@ public class Main026 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main026.java
 $ java Main026
 2,1
+$ javac Main026.java
 $
 
 ````
@@ -1069,17 +1069,17 @@ class Generic027<T> {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main027.java
-Note: Main027.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Main027.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
 $ java Main027
 1
 2
 3
 4
 5
+$ javac Main027.java
+Note: Main027.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Main027.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
 $
 
 ````
@@ -1185,10 +1185,10 @@ class Foo029 implements Comparable<Foo029> {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main029.java
 $ java Main029
 Before : [Foo { value= 5 }, Foo { value= 2 }, Foo { value= -5 }, Foo { value= 0 }, Foo { value= 30 }]
 After  : [Foo { value= -5 }, Foo { value= 0 }, Foo { value= 2 }, Foo { value= 5 }, Foo { value= 30 }]
-$ javac Main029.java
 $
 
 ````
@@ -1215,9 +1215,9 @@ public class Main030 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main030.java
 $ java Main030
-[BB, CC, AA]
+[AA, CC, BB]
+$ javac Main030.java
 $
 
 ````
@@ -1244,10 +1244,10 @@ public class Main031 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main031.java
 $ java Main031
 -4
 0
+$ javac Main031.java
 $
 
 ````
@@ -1274,10 +1274,10 @@ public class Main032 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main032.java
 $ java Main032
 -1
 0
+$ javac Main032.java
 $
 
 ````
@@ -1304,10 +1304,10 @@ public class Main033 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main033.java
 $ java Main033
 -3
 0
+$ javac Main033.java
 $
 
 ````
@@ -1338,12 +1338,12 @@ public class Main034 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main034.java
 $ java Main034
 [AA, BB, CC]
 AA
 BB
 1
+$ javac Main034.java
 $
 
 ````
@@ -1368,9 +1368,9 @@ public class Main035 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main035.java
 $ java Main035
 [[0, 0, 0], [0, 0, 0]]
+$ javac Main035.java
 $
 
 ````
@@ -1429,9 +1429,9 @@ public class Main037 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main037.java
 $ java Main037
 -1
-$ javac Main037.java
 $
 
 ````
@@ -1485,9 +1485,9 @@ public class Main039 {
 <summary>Click For Output!</summary>
 
 ````console
-$ javac Main039.java
 $ java Main039
 1
+$ javac Main039.java
 $
 
 ````
@@ -1568,13 +1568,13 @@ public class Main042 {
 <summary>Click For Output!</summary>
 
 ````console
+$ javac Main042.java
 $ java Main042
 Exception in thread "main" java.lang.UnsupportedOperationException
 	at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:72)
 	at java.base/java.util.ImmutableCollections$AbstractImmutableList.sort(ImmutableCollections.java:111)
 	at java.base/java.util.Collections.sort(Collections.java:179)
 	at Main042.main(Main042.java:6)
-$ javac Main042.java
 $
 
 ````
@@ -1705,6 +1705,437 @@ Main046.java:14: error: cannot find symbol
   symbol:   method length()
   location: variable foo of type List<Character>
 1 error
+$
+
+````
+</details>
+
+
+## Main047
+
+````java
+import java.util.*;
+
+public class Main047 {
+	public static void main(String... args)	{
+		var foo = new ArrayList<String>();
+		add(foo, "AA");
+		add(foo, "BB");
+		add(foo, "CC");
+
+		System.out.println(foo);
+	}
+
+	public static U add(T list, U element) {
+		list.add(element);
+		return element;
+	}
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main047.java
+Main047.java:13: error: cannot find symbol
+	public static U add(T list, U element) {
+	                    ^
+  symbol:   class T
+  location: class Main047
+Main047.java:13: error: cannot find symbol
+	public static U add(T list, U element) {
+	                            ^
+  symbol:   class U
+  location: class Main047
+Main047.java:13: error: cannot find symbol
+	public static U add(T list, U element) {
+	              ^
+  symbol:   class U
+  location: class Main047
+3 errors
+$
+
+````
+</details>
+
+
+## Main048
+
+````java
+import java.util.*;
+
+public class Main048 {
+	public static void main(String... args)	{
+		var foo = new ArrayList<String>();
+		add(foo, "AA");
+		add(foo, "BB");
+		add(foo, "CC");
+
+		System.out.println(foo);
+	}
+
+	public static <T,U> U add(T list, U element) {
+		list.add(element);
+		return element;
+	}
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main048.java
+Main048.java:14: error: cannot find symbol
+		list.add(element);
+		    ^
+  symbol:   method add(U)
+  location: variable list of type T
+  where U,T are type-variables:
+    U extends Object declared in method <T,U>add(T,U)
+    T extends Object declared in method <T,U>add(T,U)
+1 error
+$
+
+````
+</details>
+
+
+## Main049
+
+````java
+import java.util.*;
+
+public class Main049 {
+	public static void main(String... args)	{
+		var foo = new ArrayList<String>();
+		add(foo, "AA");
+		add(foo, "BB");
+		add(foo, "CC");
+
+		System.out.println(foo);
+	}
+
+	public static <T implements List<U>, U> U add(T list, U element) {
+		list.add(element);
+		return element;
+	}
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main049.java
+Main049.java:13: error: > expected
+	public static <T implements List<U>, U> U add(T list, U element) {
+	                ^
+Main049.java:13: error: illegal start of type
+	public static <T implements List<U>, U> U add(T list, U element) {
+	                 ^
+Main049.java:13: error: <identifier> expected
+	public static <T implements List<U>, U> U add(T list, U element) {
+	                                   ^
+Main049.java:13: error: ';' expected
+	public static <T implements List<U>, U> U add(T list, U element) {
+	                                      ^
+4 errors
+$
+
+````
+</details>
+
+
+## Main050
+
+````java
+import java.util.*;
+
+public class Main050 {
+	public static void main(String... args)	{
+		var foo = new ArrayList<String>();
+		add(foo, "AA");
+		add(foo, "BB");
+		add(foo, "CC");
+
+		System.out.println(foo);
+	}
+
+	public static <T extends ArrayList<U>, U> U add(T list, U element) {
+		list.add(element);
+		return element;
+	}
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main050.java
+$ java Main050
+[AA, BB, CC]
+$
+
+````
+</details>
+
+
+## Main051
+
+````java
+import java.util.*;
+
+public class Main051 {
+	public static void main(String... args)	{
+		var foo = new ArrayList<String>();
+		add(foo, "AA");
+		add(foo, "BB");
+		add(foo, "CC");
+
+		System.out.println(foo);
+	}
+
+	public static <T extends Collection<U>, U> U add(T list, U element) {
+		list.add(element);
+		return element;
+	}
+} 
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main051.java
+$ java Main051
+[AA, BB, CC]
+$
+
+````
+</details>
+
+
+## Main052
+
+````java
+public class Main052 {
+	public static void main(String... args) {
+		char[] foo[] = new char[3][3];
+		foo[1][3] = 'A';
+		foo[2][2] = 'B';
+		foo[3][1] = 'C';
+
+		System.out.println(foo.length);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main052.java
+$ java Main052
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at Main052.main(Main052.java:4)
+$
+
+````
+</details>
+
+
+## Main053
+
+````java
+import java.util.*;
+
+public class Main053 {
+	public static void main(String... args) {
+		var set = new TreeSet<String>();
+		set.add("A");
+		set.add("a");
+		set.add("a");
+		
+		System.out.println(set.iterator().next());
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main053.java
+$ java Main053
+A
+$
+
+````
+</details>
+
+
+## Main054
+
+````java
+public class Main054 {
+	public static void main(String... args) {
+		var foo = new String[][] {
+			{ "A1" },
+			{ "B1", "B2" }
+		};
+
+		System.out.println(foo.length + ", " + foo[0].length);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main054.java
+$ java Main054
+2, 1
+$
+
+````
+</details>
+
+
+## Main055
+
+````java
+import java.util.*;
+
+public class Main055 {
+	public static void main(String... args) {
+		var numbers = Arrays.asList(1, null, 3);
+		int one = numbers.get(1);
+		int last = numbers.get(3);
+		System.out.println(one + ", " + last);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main055
+Exception in thread "main" java.lang.NullPointerException
+	at Main055.main(Main055.java:6)
+$ javac Main055.java
+$
+
+````
+</details>
+
+
+## Main056
+
+````java
+import java.util.*;
+
+public class Main056 {
+	public static void main(String... args) {
+		var list = Arrays.asList("AAA", "aAA", "bbb", "BBB", "bB");
+		Collections.sort(list, getComparator());
+		System.out.println(list.get(0));
+	}
+
+	public static Comparator getComparator() {
+		return Comparator.comparing(String::length)
+			.thenComparing(s -> s.charAt(0))
+			.reversed();
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main056
+bbb
+$ javac Main056.java
+Note: Main056.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+$
+
+````
+</details>
+
+
+## Main057
+
+````java
+public class Main057 {
+	public static void main(String... args) {
+		var foo = new ArrayList<>();
+		foo.add(1);
+		foo.add(2);
+		foo.add(Integer.valueOf(3));
+		foo.add(Integer.valueOf(4));
+
+		foo.remove(2);
+		foo.remove(Integer.valueOf(1));
+
+		System.out.println(foo);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ javac Main057.java
+Main057.java:3: error: cannot find symbol
+		var foo = new ArrayList<>();
+		              ^
+  symbol:   class ArrayList
+  location: class Main057
+1 error
+$
+
+````
+</details>
+
+
+## Main058
+
+````java
+import java.util.*;
+
+public class Main058 {
+	public static void main(String... args) {
+		Set<String> set = new HashSet<>();
+		set.add("AA");
+		set.add("B");
+		set.add("CC");
+		set.add("D");
+
+		for(String value: set)
+			if (value.length() > 1)
+				set.remove(value);
+		System.out.println(set);
+	}
+}
+
+````
+<details>
+<summary>Click For Output!</summary>
+
+````console
+$ java Main058
+Exception in thread "main" java.util.ConcurrentModificationException
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1511)
+	at java.base/java.util.HashMap$KeyIterator.next(HashMap.java:1534)
+	at Main058.main(Main058.java:11)
+$ javac Main058.java
 $
 
 ````
