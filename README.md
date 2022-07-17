@@ -12,6 +12,7 @@ Select a topic (ex. `01-declare-and-initialize`) and try to answer these questio
 - [Object Oriented](https://github.com/macorapci/CuriousAboutCoding/tree/master/05-object-oriented/README.md)
 - [Exception](https://github.com/macorapci/CuriousAboutCoding/tree/master/06-exception/README.md)
 - [Arrays and Collections](https://github.com/macorapci/CuriousAboutJava/blob/master/07-arrays-collections/README.md)
+- [Streams And Lambda Expressions](https://github.com/macorapci/CuriousAboutJava/blob/master/08-streams-lambda-expressions/README.md)
 
 
 ## Java Version
