@@ -1,4 +1,4 @@
-# Arrays and Collections
+# Streams And Lambda Expressions
 
  ````console
 macorapci@monster:~/CuriousAboutCoding$ java --version
