@@ -13,6 +13,7 @@ Select a topic (ex. `01-declare-and-initialize`) and try to answer these questio
 - [Exception](https://github.com/macorapci/CuriousAboutCoding/tree/master/06-exception/README.md)
 - [Arrays and Collections](https://github.com/macorapci/CuriousAboutJava/blob/master/07-arrays-collections/README.md)
 - [Streams And Lambda Expressions](https://github.com/macorapci/CuriousAboutJava/blob/master/08-streams-lambda-expressions/README.md)
+- [Concurrency](https://github.com/macorapci/CuriousAboutJava/blob/master/09-concurrency/README.md)
 
 
 ## Java Version
